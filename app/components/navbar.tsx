@@ -81,11 +81,9 @@ function Navbar() {
           width: 1,
         },
         move: {
-          direction: MoveDirection.none, // Correct type
+          direction: MoveDirection.none,
           enable: true,
-          outModes: {
-            default: "bounce",
-          },
+          outModes: "bounce",
           random: false,
           speed: 0.5,
           straight: false,

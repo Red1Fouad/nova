@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  /* Custom colors are now defined in tailwind.config.js */
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
