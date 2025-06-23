@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { PageTransition } from "./components/page-transition";
 import Navbar from "@/app/components/navbar"; // Corrected path if it was wrong
+import GoogleTranslateWidget from "@/app/components/google-translate-widget";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): React.JSX.Element {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-gray-100`}>
@@ -34,9 +35,10 @@ export default function RootLayout({
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
-
-        <Navbar />
-        <main className="relative z-10">{children}</main>
+        <Navbar /> {/* Navbar remains sticky at the top */}
+        <main className="relative z-10 min-h-screen">{children}</main>{" "}
+        {/* Main content directly follows Navbar */}
+        <GoogleTranslateWidget />
       </body>
     </html>
   );

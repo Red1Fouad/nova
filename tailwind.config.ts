@@ -12,6 +12,7 @@ const config: Config = {
         "dark-purple-blue": "#6a329f", // A slightly more vibrant purple
         "cyber-blue": "#00e8f0",
         "cyber-pink": "#ff00f1",
+        "deep-purple": "#5A008A", // Your custom dark purple color
       },
       keyframes: {
         glow: {
