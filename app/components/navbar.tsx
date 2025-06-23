@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link"; // Keep Link
+import type { ISourceOptions } from "@tsparticles/engine";
 import React, { useCallback, useMemo, useEffect, useState } from "react"; // Add useEffect, useState
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -44,7 +45,7 @@ function Navbar() {
   }, []); // Empty dependency array ensures this runs only once
 
   // Memoize the particles options to prevent unnecessary re-renders of the Particles component
-  const particlesOptions = useMemo(
+  const particlesOptions: ISourceOptions = useMemo(
     () => ({
       background: {
         color: {
@@ -83,7 +84,7 @@ function Navbar() {
         move: {
           direction: MoveDirection.none,
           enable: true,
-          outModes: "bounce",
+          outModes: "bounce", // ✅ already fixed
           random: false,
           speed: 0.5,
           straight: false,
