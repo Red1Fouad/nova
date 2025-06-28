@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "home": "HOME",
+    "faq": "FAQ",
+    "music": "MUSIC",
+    "download": "DOWNLOAD",
+    "discord": "DISCORD",
+    "brand": "MEGAMAN NOVA"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "What is Megaman Nova?",
+        "answer": "Megaman Nova is a non-profit, fan-made game created by The Red Soda Team. It's a new adventure that pushes the Blue Bomber to his limits in unfamiliar and challenging worlds."
+      },
+      {
+        "question": "Is this an official Capcom game?",
+        "answer": "No, this is a fan project created out of passion for the Megaman series. It is not affiliated with or endorsed by Capcom. All Megaman characters and concepts are property of Capcom."
+      },
+      {
+        "question": "When will the game be released?",
+        "answer": "The game is currently in development. We are a small team working in our free time. Please follow our Discord for the latest updates on progress and release dates. We don't have a fixed release date yet."
+      },
+      {
+        "question": "What platforms will it be available on?",
+        "answer": "Our primary target platform is Windows PC. We may explore other platforms after the initial release, but there are no concrete plans at this time."
+      },
+      {
+        "question": "How much will it cost?",
+        "answer": "Megaman Nova will be completely free to download and play. As a non-profit fan project, we cannot and will not charge money for the game."
+      },
+      {
+        "question": "How can I support the project?",
+        "answer": "The best way to support us is to join our community on Discord, share the project with your friends, and give us feedback during public tests. We are not accepting monetary donations."
+      }
+    ]
+  },
+  "download": {
+    "title": "Download Megaman Nova",
+    "notAvailable": "The game is not yet available for download. Join our Discord for updates!",
+    "button": "Download Latest Build (Coming Soon)",
+    "requirementsTitle": "System Requirements (Preliminary):",
+    "requirements": {
+      "os": "OS: Windows XP or higher",
+      "processor": "Processor: Dual Core 2.4GHz",
+      "memory": "Memory: 2 GB RAM",
+      "graphics": "Graphics: DirectX 9 compatible GPU",
+      "storage": "Storage: 1 GB available space"
+    }
+  },
+  "music": {
+    "title": "The Soundtrack of Nova",
+    "subtitle": "Dive into the epic sounds that define the world of Mega Man Nova.",
+    "comingSoonTitle": "Coming Soon...",
+    "comingSoon": "The soundtrack will be available in a future update. Stay tuned!",
+    "credit": "Music by RushJet1 - \"Mega Man Remade\"",
+    "support": "Support the artist on Bandcamp!"
+  },
+  "home": {
+    "headline": "Embark on a mind-bending journey as Mega Man is thrust into strange new worlds-where his skills, willpower, and very consciousness face the ",
+    "headlineHighlight": "ULTIMATE",
+    "headlineEnd": " test.",
+    "subtitle": "A non-profit project by The Red Soda Team."
+  }
+}

@@ -11,13 +11,8 @@ import { MoveDirection } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { Disc3 } from "lucide-react";
 import dynamic from "next/dynamic"; // Import dynamic for client-side rendering only
-
-const navLinks = [
-  { name: "HOME", href: "/" },
-  { name: "FAQ", href: "/faq" },
-  { name: "MUSIC", href: "/music" },
-  { name: "DOWNLOAD", href: "/download" },
-];
+import { getTranslation } from "../lib/i18n";
+import { useLanguage } from "../lib/LanguageContext";
 
 // Dynamically import LanguageSwitcher to ensure it only renders on the client
 const LanguageSwitcher = dynamic(() => import("./language-switcher"), {
@@ -30,6 +25,12 @@ let particlesEngineInitialized = false;
 function Navbar() {
   const pathname = usePathname();
   const [particlesLoaded, setParticlesLoaded] = useState(false); // State to track if particles engine is loaded
+  const { language } = useLanguage();
+  const [t, setT] = useState<any>(null);
+
+  useEffect(() => {
+    getTranslation(language).then(setT);
+  }, [language]);
 
   useEffect(() => {
     if (!particlesEngineInitialized) {
@@ -111,11 +112,18 @@ function Navbar() {
     []
   );
 
+  if (!t) return null; // or a loading spinner
+
+  const navLinks = [
+    { name: t.navbar.home, href: "/" },
+    { name: t.navbar.faq, href: "/faq" },
+    { name: t.navbar.music, href: "/music" },
+    { name: t.navbar.download, href: "/download" },
+  ];
+
   return (
-    <header className="sticky top-0 z-[9999] bg-black/50 backdrop-blur-lg border-b border-gray-800 relative overflow-hidden">
-      {" "}
-      {/* Removed h-20 */}
-      {particlesLoaded && ( // Conditionally render Particles component
+    <header className="sticky top-0 z-[9999] bg-black/50 backdrop-blur-lg border-b border-gray-800 overflow-hidden">
+      {particlesLoaded && (
         <Particles
           id="tsparticles-navbar"
           className="absolute inset-0 z-0"
@@ -123,12 +131,7 @@ function Navbar() {
         />
       )}
       <nav className="container mx-auto flex items-center justify-between p-4 text-gray-200 relative z-10">
-        {" "}
-        {/* Ensure nav content is above particles */}
         <div className="flex items-center gap-4">
-          {/* Group logo and language switcher */}
-          {/* Logo */}
-          {/* Original Link component for logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/logo.png"
@@ -136,15 +139,13 @@ function Navbar() {
               width={40}
               height={40}
             />
-            <span className="text-xl font-bold">MEGAMAN NOVA</span>
+            <span className="text-xl font-bold">{t.navbar.brand}</span>
           </Link>
-          {/* Language Switcher */}
           <LanguageSwitcher />
         </div>
         <div className="flex items-center gap-8 text-sm font-medium">
-          {/* Navigation Links */}
           {navLinks.map((link) =>
-            link.name === "DOWNLOAD" ? (
+            link.name === t.navbar.download ? (
               <Link
                 key={link.name}
                 href={link.href}
@@ -164,7 +165,6 @@ function Navbar() {
               </Link>
             )
           )}
-          {/* Discord Link */}
           <a
             href="https://discord.gg/placeholder"
             target="_blank"
@@ -172,7 +172,7 @@ function Navbar() {
             className="flex items-center gap-2 bg-indigo-600 px-4 py-2 rounded-md hover:bg-indigo-500 transition-all hover:shadow-[0_0_10px_rgba(99,102,241,0.8)]"
           >
             <Disc3 size={16} />
-            DISCORD
+            {t.navbar.discord}
           </a>
         </div>
       </nav>

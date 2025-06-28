@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef, JSX } from "react";
 import { ChevronRight, ChevronsRight, Globe } from "lucide-react"; // Import ChevronRight and ChevronsRight
 import { GB, FR, PL, JP } from "country-flag-icons/react/3x2";
+import { useLanguage } from "../lib/LanguageContext";
 
 const languages = [
   { code: "en", name: "English", FlagComponent: GB },
@@ -14,11 +15,11 @@ const languages = [
 const LanguageSwitcher = (): React.JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { language, setLanguage } = useLanguage();
 
   const handleLanguageChange = (langCode: string): void => {
-    console.log(`Switching language to: ${langCode}`);
-
-    // Find the Google Translate dropdown and trigger the change
+    setLanguage(langCode as any); // Update context
+    // Google Translate integration (optional):
     const googleTranslateSelect = document.querySelector(
       "select.goog-te-combo"
     ) as HTMLSelectElement;

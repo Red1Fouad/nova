@@ -25,3 +25,27 @@ body > .skiptranslate {
 body {
   top: 0 !important;
 }
+
+/* Floating animation for Megaman image */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+/* Glowing text shadow for headline highlight */
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 16px #00bfff) drop-shadow(0 0 32px #00bfff);
+}
+
+/* Glowing text shadow for headline highlight (gold, medium) */
+.drop-shadow-gold {
+  filter: drop-shadow(0 0 4px #ffd700cc) drop-shadow(0 0 8px #ffd70099);
+}

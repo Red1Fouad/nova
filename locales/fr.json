@@ -1,0 +1,64 @@
+{
+  "navbar": {
+    "home": "ACCUEIL",
+    "faq": "FAQ",
+    "music": "MUSIQUE",
+    "download": "TÉLÉCHARGER",
+    "discord": "DISCORD",
+    "brand": "MEGAMAN NOVA"
+  },
+  "faq": {
+    "title": "Foire Aux Questions",
+    "questions": [
+      {
+        "question": "Qu'est-ce que Megaman Nova ?",
+        "answer": "Megaman Nova est un jeu de fans à but non lucratif créé par The Red Soda Team. C'est une nouvelle aventure qui pousse le Blue Bomber à ses limites dans des mondes inconnus et difficiles."
+      },
+      {
+        "question": "Est-ce un jeu officiel Capcom ?",
+        "answer": "Non, il s'agit d'un projet de fans créé par passion pour la série Megaman. Il n'est pas affilié ni approuvé par Capcom. Tous les personnages et concepts de Megaman sont la propriété de Capcom."
+      },
+      {
+        "question": "Quand le jeu sera-t-il disponible ?",
+        "answer": "Le jeu est actuellement en développement. Nous sommes une petite équipe travaillant sur notre temps libre. Veuillez suivre notre Discord pour les dernières mises à jour sur l'avancement et les dates de sortie. Nous n'avons pas encore de date de sortie fixe."
+      },
+      {
+        "question": "Sur quelles plateformes sera-t-il disponible ?",
+        "answer": "Notre principale plateforme cible est Windows PC. Nous pourrions explorer d'autres plateformes après la sortie initiale, mais il n'y a pas de plans concrets pour le moment."
+      },
+      {
+        "question": "Combien cela coûtera-t-il ?",
+        "answer": "Megaman Nova sera entièrement gratuit à télécharger et à jouer. En tant que projet de fans à but non lucratif, nous ne pouvons pas et ne facturerons pas le jeu."
+      },
+      {
+        "question": "Comment puis-je soutenir le projet ?",
+        "answer": "La meilleure façon de nous soutenir est de rejoindre notre communauté sur Discord, de partager le projet avec vos amis et de nous donner votre avis lors des tests publics. Nous n'acceptons pas de dons monétaires."
+      }
+    ]
+  },
+  "download": {
+    "title": "Télécharger Megaman Nova",
+    "notAvailable": "Le jeu n'est pas encore disponible au téléchargement. Rejoignez notre Discord pour les mises à jour !",
+    "button": "Télécharger la dernière version (Bientôt disponible)",
+    "requirementsTitle": "Configuration requise (préliminaire) :",
+    "requirements": {
+      "os": "OS : Windows XP ou supérieur",
+      "processor": "Processeur : Dual Core 2.4GHz",
+      "memory": "Mémoire : 2 Go de RAM",
+      "graphics": "Graphiques : GPU compatible DirectX 9",
+      "storage": "Stockage : 1 Go d'espace disponible"
+    }
+  },
+  "music": {
+    "title": "La bande-son de Nova",
+    "subtitle": "Plongez dans les sons épiques qui définissent le monde de Mega Man Nova.",
+    "comingSoonTitle": "Bientôt disponible...",
+    "comingSoon": "La bande-son sera disponible dans une prochaine mise à jour. Restez à l'écoute !"
+  },
+  "home": {
+    "headline": "Embarquez pour un voyage hallucinant alors que Mega Man est propulsé dans de nouveaux mondes étranges - où ses compétences, sa volonté et même sa conscience sont mises à l'épreuve ",
+    "headlineHighlight": "ULTIME",
+    "headlineEnd": " .",
+    "subtitle": "Un projet à but non lucratif par The Red Soda Team."
+  }
+}
